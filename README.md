@@ -14,8 +14,8 @@
 
 ## Todo
 
-[ ] User entity 생성
-[ ] User test, schema, resolver 작성
+- [ ] User entity 생성
+- [ ] User test, schema, resolver 작성
 
 ## history
 
