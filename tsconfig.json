@@ -28,7 +28,7 @@
     "skipLibCheck": true,
     "rootDir": "src",
     "baseUrl": ".",
-    "esModuleInterop": true,
+    "esModuleInterop": false,
     "paths": {
       "@src/*": [ "src/*" ]
     }

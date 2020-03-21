@@ -1,8 +1,8 @@
-import express from 'express';
+import * as express from 'express';
 import { ApolloServer } from 'apollo-server-express';
-import cors from 'cors';
-import helmet from 'helmet';
-import logger from 'morgan';
+import * as cors from 'cors';
+import * as helmet from 'helmet';
+import * as logger from 'morgan';
 import schema from './schema';
 
 const app = express();
