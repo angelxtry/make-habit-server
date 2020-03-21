@@ -1,3 +1,4 @@
+import 'module-alias/register';
 import { createConnection } from 'typeorm';
 import * as dotenv from 'dotenv';
 import app from './app';

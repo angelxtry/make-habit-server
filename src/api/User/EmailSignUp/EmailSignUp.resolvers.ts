@@ -1,10 +1,10 @@
 import { IResolvers } from 'graphql-tools';
-import User from '../../../entities/User';
-import createJWT from '../../../utils/createJWT';
+import User from '@src/entities/User';
+import createJWT from '@src/utils/createJWT';
 import {
   MutationEmailSignUpArgs,
   EmailSignUpResponse,
-} from '../../../types/graphql';
+} from '@src/types/graphql';
 
 const resolver: IResolvers = {
   Mutation: {
