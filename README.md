@@ -14,9 +14,37 @@
 
 ## Todo
 
-- [ ] User entity 생성
-- [ ] User test, schema, resolver 작성
+- [v] User entity 생성
+- [v] User Email SignUp schema 작성
+- [v] User Email SignUp resolver 작성
+- [ ] Jest setting
+- [ ] User Email SignUp test 작성
+- [ ] User Email Verification schema 작성
+- [ ] User Email Verification test 작성
+- [ ] User Email Verification resolver 작성
+- [ ] User Email SignIn schema 작성
+- [ ] User Email SignIn test 작성
+- [ ] User Email SignIn resolver 작성
+- [ ] User MyProfile schema 작성
+- [ ] User MyProfile test 작성
+- [ ] User MyProfile resolver 작성
+- [ ] User UpadteProfile schema 작성
+- [ ] User UpadteProfile test 작성
+- [ ] User UpadteProfile resolver 작성
+
+---
+
+- [ ] Habit entity 생성
+- [ ] Habit CreateHabit schema 작성
+- [ ] Habit GetHabits schema 작성
+- [ ] Habit ModifyHabits schema 작성
+- [ ] Habit DeleteHabits schema 작성
+
+---
+
+- [ ] Streak entity 생성
 
 ## history
 
 - 2020-03-20 start, 기본 설정
+- 2020-03-21 User EmailSignUp schema, resolver 작성
