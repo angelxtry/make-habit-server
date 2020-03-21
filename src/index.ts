@@ -1,5 +1,5 @@
 import { createConnection } from 'typeorm';
-import dotenv from 'dotenv';
+import * as dotenv from 'dotenv';
 import app from './app';
 import connectionOptions from './ormconfig';
 
