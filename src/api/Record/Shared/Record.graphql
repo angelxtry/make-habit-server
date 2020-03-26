@@ -1,0 +1,17 @@
+enum Score {
+  BAD
+  SOSO
+  BEST
+}
+
+type Record {
+  id: ID!
+  title: String!
+  content: String!
+  date: String!
+  score: Score!
+  habitId: Int!
+  habit: Habit!
+  createdAt: String!
+  updatedAt: String
+}

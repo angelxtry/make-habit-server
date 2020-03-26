@@ -1,0 +1,13 @@
+type Habit {
+  id: ID!
+  title: String!
+  content: String!
+  startAt: String!
+  ownerId: Int!
+  owner: User!
+  records: [Record]
+  streakDays: Int!
+  bestStreakDays: Int!
+  createdAt: String!
+  updatedAt: String
+}

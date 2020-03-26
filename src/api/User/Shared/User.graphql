@@ -1,0 +1,19 @@
+enum SnsDiv {
+  GOOGLE
+  FACEBOOK
+}
+
+type User {
+  id: ID!
+  email: String
+  verifiedEmail: Boolean!
+  name: String!
+  age: Int
+  password: String
+  snsId: String
+  snsDiv: SnsDiv
+  profilePhoto: String
+  habits: [Habit]
+  createdAt: String!
+  updatedAt: String
+}

@@ -15,6 +15,21 @@ export type EmailSignUpResponse = {
   token?: Maybe<Scalars['String']>;
 };
 
+export type Habit = {
+   __typename?: 'Habit';
+  id: Scalars['ID'];
+  title: Scalars['String'];
+  content: Scalars['String'];
+  startAt: Scalars['String'];
+  ownerId: Scalars['Int'];
+  owner: User;
+  records?: Maybe<Array<Maybe<Record>>>;
+  streakDays: Scalars['Int'];
+  bestStreakDays: Scalars['Int'];
+  createdAt: Scalars['String'];
+  updatedAt?: Maybe<Scalars['String']>;
+};
+
 export type Mutation = {
    __typename?: 'Mutation';
   EmailSignUp: EmailSignUpResponse;
@@ -30,4 +45,44 @@ export type MutationEmailSignUpArgs = {
 export type Query = {
    __typename?: 'Query';
   hello: Scalars['String'];
+};
+
+export type Record = {
+   __typename?: 'Record';
+  id: Scalars['ID'];
+  title: Scalars['String'];
+  content: Scalars['String'];
+  date: Scalars['String'];
+  score: Score;
+  habitId: Scalars['Int'];
+  habit: Habit;
+  createdAt: Scalars['String'];
+  updatedAt?: Maybe<Scalars['String']>;
+};
+
+export enum Score {
+  Bad = 'BAD',
+  Soso = 'SOSO',
+  Best = 'BEST'
+}
+
+export enum SnsDiv {
+  Google = 'GOOGLE',
+  Facebook = 'FACEBOOK'
+}
+
+export type User = {
+   __typename?: 'User';
+  id: Scalars['ID'];
+  email?: Maybe<Scalars['String']>;
+  verifiedEmail: Scalars['Boolean'];
+  name: Scalars['String'];
+  age?: Maybe<Scalars['Int']>;
+  password?: Maybe<Scalars['String']>;
+  snsId?: Maybe<Scalars['String']>;
+  snsDiv?: Maybe<SnsDiv>;
+  profilePhoto?: Maybe<Scalars['String']>;
+  habits?: Maybe<Array<Maybe<Habit>>>;
+  createdAt: Scalars['String'];
+  updatedAt?: Maybe<Scalars['String']>;
 };
