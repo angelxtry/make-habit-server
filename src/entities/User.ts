@@ -8,8 +8,10 @@ import {
   UpdateDateColumn,
   BeforeInsert,
   BeforeUpdate,
+  OneToMany,
 } from 'typeorm';
 import { IsEmail } from 'class-validator';
+import Habit from './Habit';
 
 const BCRYPT_ROUND = 10;
 
@@ -47,6 +49,9 @@ class User extends BaseEntity {
 
   @Column({ type: 'text', nullable: true })
   profilePhoto: string;
+
+  @OneToMany(() => Habit, (habit) => habit.owner)
+  habits: Habit[];
 
   @CreateDateColumn()
   createdAt: string;
