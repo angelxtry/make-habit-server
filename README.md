@@ -17,6 +17,12 @@
 - [v] User entity 생성
 - [v] User Email SignUp schema 작성
 - [v] User Email SignUp resolver 작성
+- [v] Authentication 추가
+- [v] User schema 생성
+- [v] Habit entity, schema 생성
+- [v] Record entity, schema 생성
+- [v] Habit CreateHabit schema, resolver 작성
+
 - [ ] Jest setting
 - [ ] User Email SignUp test 작성
 - [ ] User Email Verification schema 작성
@@ -34,17 +40,21 @@
 
 ---
 
-- [ ] Habit entity 생성
-- [ ] Habit CreateHabit schema 작성
 - [ ] Habit GetHabits schema 작성
 - [ ] Habit ModifyHabits schema 작성
 - [ ] Habit DeleteHabits schema 작성
 
 ---
 
-- [ ] Streak entity 생성
-
 ## history
 
 - 2020-03-20 start, 기본 설정
 - 2020-03-21 User EmailSignUp schema, resolver 작성
+- 2020-03-26
+  - Authentication 로직 추가
+  - User, Habit, Record entity, schema 생성
+  - CreateHabit schema, resolver 추가
+
+## 관련 글
+
+- [Express Request 확장하기(TypeScript)](https://blog.doitreviews.com/development/2020-03-26-extend-express-request-type-in-typescript/)
