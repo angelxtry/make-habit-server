@@ -1,0 +1,12 @@
+type CreateHabitResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  CreateHabit(
+    title: String!
+    content: String!
+    startAt: String!
+  ): CreateHabitResponse!
+}

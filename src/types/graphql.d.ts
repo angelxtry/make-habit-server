@@ -8,6 +8,12 @@ export type Scalars = {
   Float: number;
 };
 
+export type CreateHabitResponse = {
+   __typename?: 'CreateHabitResponse';
+  ok: Scalars['Boolean'];
+  error?: Maybe<Scalars['String']>;
+};
+
 export type EmailSignUpResponse = {
    __typename?: 'EmailSignUpResponse';
   ok: Scalars['Boolean'];
@@ -32,7 +38,15 @@ export type Habit = {
 
 export type Mutation = {
    __typename?: 'Mutation';
+  CreateHabit: CreateHabitResponse;
   EmailSignUp: EmailSignUpResponse;
+};
+
+
+export type MutationCreateHabitArgs = {
+  title: Scalars['String'];
+  content: Scalars['String'];
+  startAt: Scalars['String'];
 };
 
 
