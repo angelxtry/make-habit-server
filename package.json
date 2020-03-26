@@ -33,8 +33,9 @@
     "prebuild": "rm -rf dist",
     "build": "tsc",
     "postbuild": "cd src && copy ./api/**/*.graphql ../dist/api",
-    "dev": "NODE_ENV=development node dist/index.js",
-    "watch": "nodemon --exec \"yarn build && yarn dev\" --watch src -e ts,graphql",
+    "dev": "NODE_ENV=development yarn build && node dist/index.js",
+    "start": "NODE_ENV=production yarn build && node dist/index.js",
+    "watch": "NODE_ENV=development nodemon --exec ts-node -r tsconfig-paths/register --files src/index.ts -e ts,graphql",
     "codegen": "graphql-codegen --config ./codegen.yml"
   },
   "_moduleAliases": {

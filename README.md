@@ -58,3 +58,5 @@
 ## 관련 글
 
 - [Express Request 확장하기(TypeScript)](https://blog.doitreviews.com/development/2020-03-26-extend-express-request-type-in-typescript/)
+- [Path alias를 사용하여 TypeScript import 경로 깔끔하게 만들기](https://blog.doitreviews.com/development/2020-03-04-using-path-alias-in-typescript/)
+- [Path alias를 사용하여 TypeScript import 경로 깔끔하게 만들기 2](https://blog.doitreviews.com/development/2020-03-26-using-path-alias-in-typescript-2/)
