@@ -43,10 +43,10 @@ class Habit extends BaseEntity {
   bestStreakDays: number;
 
   @CreateDateColumn()
-  createdAt: string;
+  createdAt: Date;
 
   @UpdateDateColumn()
-  updatedAt: string;
+  updatedAt: Date;
 }
 
 export default Habit;

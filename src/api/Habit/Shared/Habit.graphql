@@ -1,13 +1,13 @@
 type Habit {
-  id: ID!
+  id: Int!
   title: String!
   content: String!
-  startAt: String!
+  startAt: Date!
   ownerId: Int!
   owner: User!
   records: [Record]
   streakDays: Int!
   bestStreakDays: Int!
-  createdAt: String!
-  updatedAt: String
+  createdAt: DateTime!
+  updatedAt: DateTime
 }

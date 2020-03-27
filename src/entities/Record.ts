@@ -10,9 +10,9 @@ import {
 import Habit from './Habit';
 
 export enum Score {
-  BAD = 'BAD',
-  SOSO = 'SOSO',
-  BEST = 'BEST',
+  Bad = 'BAD',
+  Soso = 'SOSO',
+  Best = 'BEST',
 }
 
 @Entity()
@@ -31,7 +31,7 @@ class Record extends BaseEntity {
   @Column()
   date: Date;
 
-  @Column({ type: 'enum', enum: Score, default: Score.SOSO })
+  @Column({ type: 'enum', enum: Score, default: Score.Soso })
   score: Score;
 
   @Column()
@@ -41,10 +41,10 @@ class Record extends BaseEntity {
   habit: Habit;
 
   @CreateDateColumn()
-  createdAt: string;
+  createdAt: Date;
 
   @UpdateDateColumn()
-  updatedAt: string;
+  updatedAt: Date;
 }
 
 export default Record;

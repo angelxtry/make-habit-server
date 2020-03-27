@@ -5,13 +5,13 @@ enum Score {
 }
 
 type Record {
-  id: ID!
+  id: Int!
   title: String!
   content: String!
-  date: String!
+  date: Date!
   score: Score!
   habitId: Int!
   habit: Habit!
-  createdAt: String!
-  updatedAt: String
+  createdAt: DateTime!
+  updatedAt: DateTime
 }
