@@ -6,6 +6,8 @@ export type Scalars = {
   Boolean: boolean;
   Int: number;
   Float: number;
+  Date: any;
+  DateTime: any;
 };
 
 export type CreateHabitResponse = {
@@ -14,6 +16,8 @@ export type CreateHabitResponse = {
   error?: Maybe<Scalars['String']>;
 };
 
+
+
 export type EmailSignUpResponse = {
    __typename?: 'EmailSignUpResponse';
   ok: Scalars['Boolean'];
@@ -21,19 +25,26 @@ export type EmailSignUpResponse = {
   token?: Maybe<Scalars['String']>;
 };
 
+export type GetHabitsResponse = {
+   __typename?: 'GetHabitsResponse';
+  ok: Scalars['Boolean'];
+  habits?: Maybe<Array<Maybe<Habit>>>;
+  error?: Maybe<Scalars['String']>;
+};
+
 export type Habit = {
    __typename?: 'Habit';
-  id: Scalars['ID'];
+  id: Scalars['Int'];
   title: Scalars['String'];
   content: Scalars['String'];
-  startAt: Scalars['String'];
+  startAt: Scalars['Date'];
   ownerId: Scalars['Int'];
   owner: User;
   records?: Maybe<Array<Maybe<Record>>>;
   streakDays: Scalars['Int'];
   bestStreakDays: Scalars['Int'];
-  createdAt: Scalars['String'];
-  updatedAt?: Maybe<Scalars['String']>;
+  createdAt: Scalars['DateTime'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
 };
 
 export type Mutation = {
@@ -58,20 +69,21 @@ export type MutationEmailSignUpArgs = {
 
 export type Query = {
    __typename?: 'Query';
+  GetHabits: GetHabitsResponse;
   hello: Scalars['String'];
 };
 
 export type Record = {
    __typename?: 'Record';
-  id: Scalars['ID'];
+  id: Scalars['Int'];
   title: Scalars['String'];
   content: Scalars['String'];
-  date: Scalars['String'];
+  date: Scalars['Date'];
   score: Score;
   habitId: Scalars['Int'];
   habit: Habit;
-  createdAt: Scalars['String'];
-  updatedAt?: Maybe<Scalars['String']>;
+  createdAt: Scalars['DateTime'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
 };
 
 export enum Score {
@@ -81,22 +93,23 @@ export enum Score {
 }
 
 export enum SnsDiv {
+  None = 'NONE',
   Google = 'GOOGLE',
   Facebook = 'FACEBOOK'
 }
 
 export type User = {
    __typename?: 'User';
-  id: Scalars['ID'];
+  id: Scalars['Int'];
   email?: Maybe<Scalars['String']>;
   verifiedEmail: Scalars['Boolean'];
   name: Scalars['String'];
   age?: Maybe<Scalars['Int']>;
   password?: Maybe<Scalars['String']>;
   snsId?: Maybe<Scalars['String']>;
-  snsDiv?: Maybe<SnsDiv>;
+  snsDiv: SnsDiv;
   profilePhoto?: Maybe<Scalars['String']>;
   habits?: Maybe<Array<Maybe<Habit>>>;
-  createdAt: Scalars['String'];
-  updatedAt?: Maybe<Scalars['String']>;
+  createdAt: Scalars['DateTime'];
+  updatedAt?: Maybe<Scalars['DateTime']>;
 };

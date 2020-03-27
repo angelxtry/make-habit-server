@@ -1,0 +1,9 @@
+type GetHabitsResponse {
+  ok: Boolean!
+  habits: [Habit]
+  error: String
+}
+
+type Query {
+  GetHabits: GetHabitsResponse!
+}
