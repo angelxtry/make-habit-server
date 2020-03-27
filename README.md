@@ -22,6 +22,8 @@
 - [v] Habit entity, schema 생성
 - [v] Record entity, schema 생성
 - [v] Habit CreateHabit schema, resolver 작성
+- [v] Habit GetHabits schema, resolver 작성
+- [v] Habit UpdateHabits schema, resolver 작성
 
 - [ ] Jest setting
 - [ ] User Email SignUp test 작성
@@ -40,8 +42,6 @@
 
 ---
 
-- [ ] Habit GetHabits schema 작성
-- [ ] Habit ModifyHabits schema 작성
 - [ ] Habit DeleteHabits schema 작성
 
 ---
@@ -54,6 +54,8 @@
   - Authentication 로직 추가
   - User, Habit, Record entity, schema 생성
   - CreateHabit schema, resolver 추가
+- 2020-03-27
+  - GetHabit, UpdateHabit schema, resolver 작성
 
 ## 관련 글
 
