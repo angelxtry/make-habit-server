@@ -1,0 +1,8 @@
+type UpdateHabitResponse {
+  ok: Boolean!
+  error: String
+}
+
+type Mutation {
+  UpdateHabit(id: Int!, title: String, content: String): UpdateHabitResponse!
+}

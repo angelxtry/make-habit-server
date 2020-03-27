@@ -51,6 +51,7 @@ export type Mutation = {
    __typename?: 'Mutation';
   CreateHabit: CreateHabitResponse;
   EmailSignUp: EmailSignUpResponse;
+  UpdateHabit: UpdateHabitResponse;
 };
 
 
@@ -65,6 +66,13 @@ export type MutationEmailSignUpArgs = {
   name: Scalars['String'];
   email: Scalars['String'];
   password: Scalars['String'];
+};
+
+
+export type MutationUpdateHabitArgs = {
+  id: Scalars['Int'];
+  title?: Maybe<Scalars['String']>;
+  content?: Maybe<Scalars['String']>;
 };
 
 export type Query = {
@@ -97,6 +105,12 @@ export enum SnsDiv {
   Google = 'GOOGLE',
   Facebook = 'FACEBOOK'
 }
+
+export type UpdateHabitResponse = {
+   __typename?: 'UpdateHabitResponse';
+  ok: Scalars['Boolean'];
+  error?: Maybe<Scalars['String']>;
+};
 
 export type User = {
    __typename?: 'User';
