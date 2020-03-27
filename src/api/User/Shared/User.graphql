@@ -1,19 +1,20 @@
 enum SnsDiv {
+  NONE
   GOOGLE
   FACEBOOK
 }
 
 type User {
-  id: ID!
+  id: Int!
   email: String
   verifiedEmail: Boolean!
   name: String!
   age: Int
   password: String
   snsId: String
-  snsDiv: SnsDiv
+  snsDiv: SnsDiv!
   profilePhoto: String
   habits: [Habit]
-  createdAt: String!
-  updatedAt: String
+  createdAt: DateTime!
+  updatedAt: DateTime
 }

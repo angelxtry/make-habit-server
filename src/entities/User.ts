@@ -16,8 +16,9 @@ import Habit from './Habit';
 const BCRYPT_ROUND = 10;
 
 export enum SnsDiv {
-  GOOGLE = 'GOOGLE',
-  FACEBOOK = 'FACEBOOK',
+  None = 'NONE',
+  Google = 'GOOGLE',
+  Facebook = 'FACEBOOK',
 }
 
 @Entity()
@@ -44,20 +45,23 @@ class User extends BaseEntity {
   @Column({ type: 'text', nullable: true })
   snsId: string;
 
-  @Column({ type: 'enum', enum: SnsDiv, nullable: true })
+  @Column({ type: 'enum', enum: SnsDiv, default: SnsDiv.None })
   snsDiv: SnsDiv;
 
   @Column({ type: 'text', nullable: true })
   profilePhoto: string;
 
-  @OneToMany(() => Habit, (habit) => habit.owner)
+  @OneToMany(
+    () => Habit,
+    (habit) => habit.owner,
+  )
   habits: Habit[];
 
   @CreateDateColumn()
-  createdAt: string;
+  createdAt: Date;
 
   @UpdateDateColumn()
-  updatedAt: string;
+  updatedAt: Date;
 
   private hashPassword(password: string): Promise<string> {
     return bcrypt.hash(password, BCRYPT_ROUND);
