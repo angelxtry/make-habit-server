@@ -18,6 +18,13 @@ export type CreateHabitResponse = {
 
 
 
+export type EmailSignInResponse = {
+   __typename?: 'EmailSignInResponse';
+  ok: Scalars['Boolean'];
+  error?: Maybe<Scalars['String']>;
+  token?: Maybe<Scalars['String']>;
+};
+
 export type EmailSignUpResponse = {
    __typename?: 'EmailSignUpResponse';
   ok: Scalars['Boolean'];
@@ -50,6 +57,7 @@ export type Habit = {
 export type Mutation = {
    __typename?: 'Mutation';
   CreateHabit: CreateHabitResponse;
+  EmailSignIn: EmailSignInResponse;
   EmailSignUp: EmailSignUpResponse;
   UpdateHabit: UpdateHabitResponse;
 };
@@ -59,6 +67,12 @@ export type MutationCreateHabitArgs = {
   title: Scalars['String'];
   content: Scalars['String'];
   startAt: Scalars['String'];
+};
+
+
+export type MutationEmailSignInArgs = {
+  email: Scalars['String'];
+  password: Scalars['String'];
 };
 
 
