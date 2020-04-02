@@ -1,6 +1,6 @@
 type GetHabitsResponse {
   ok: Boolean!
-  habits: [Habit]
+  habits: [Habit!]
   error: String
 }
 
