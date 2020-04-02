@@ -32,10 +32,17 @@ export type EmailSignUpResponse = {
   token?: Maybe<Scalars['String']>;
 };
 
+export type GetHabitResponse = {
+   __typename?: 'GetHabitResponse';
+  ok: Scalars['Boolean'];
+  habit?: Maybe<Habit>;
+  error?: Maybe<Scalars['String']>;
+};
+
 export type GetHabitsResponse = {
    __typename?: 'GetHabitsResponse';
   ok: Scalars['Boolean'];
-  habits?: Maybe<Array<Maybe<Habit>>>;
+  habits?: Maybe<Array<Habit>>;
   error?: Maybe<Scalars['String']>;
 };
 
@@ -91,8 +98,14 @@ export type MutationUpdateHabitArgs = {
 
 export type Query = {
    __typename?: 'Query';
+  GetHabit: GetHabitResponse;
   GetHabits: GetHabitsResponse;
   hello: Scalars['String'];
+};
+
+
+export type QueryGetHabitArgs = {
+  id: Scalars['Int'];
 };
 
 export type Record = {
