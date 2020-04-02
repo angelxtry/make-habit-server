@@ -24,15 +24,15 @@
 - [v] Habit CreateHabit schema, resolver 작성
 - [v] Habit GetHabits schema, resolver 작성
 - [v] Habit UpdateHabits schema, resolver 작성
+- [v] User Email SignIn schema 작성
+- [v] User Email SignIn resolver 작성
 
 - [ ] Jest setting
 - [ ] User Email SignUp test 작성
 - [ ] User Email Verification schema 작성
 - [ ] User Email Verification test 작성
 - [ ] User Email Verification resolver 작성
-- [ ] User Email SignIn schema 작성
 - [ ] User Email SignIn test 작성
-- [ ] User Email SignIn resolver 작성
 - [ ] User MyProfile schema 작성
 - [ ] User MyProfile test 작성
 - [ ] User MyProfile resolver 작성
