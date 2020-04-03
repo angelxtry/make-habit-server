@@ -4,5 +4,5 @@ type UpdateHabitResponse {
 }
 
 type Mutation {
-  UpdateHabit(id: Int!, title: String, content: String): UpdateHabitResponse!
+  UpdateHabit(id: Int!, title: String!, content: String!): UpdateHabitResponse!
 }

@@ -92,8 +92,8 @@ export type MutationEmailSignUpArgs = {
 
 export type MutationUpdateHabitArgs = {
   id: Scalars['Int'];
-  title?: Maybe<Scalars['String']>;
-  content?: Maybe<Scalars['String']>;
+  title: Scalars['String'];
+  content: Scalars['String'];
 };
 
 export type Query = {

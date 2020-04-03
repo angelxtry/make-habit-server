@@ -5,7 +5,6 @@ import {
   UpdateHabitResponse,
   MutationUpdateHabitArgs,
 } from '@src/types/graphql';
-import cleanNullArgs from '@src/utils/cleanNullArgs';
 import Habit from '@src/entities/Habit';
 
 const resolver: IResolvers = {
@@ -21,8 +20,7 @@ const resolver: IResolvers = {
           const { id } = args;
           const habit = await Habit.findOne({ id, owner: user });
           if (habit) {
-            const notnull = cleanNullArgs(args);
-            await Habit.update({ id: habit.id }, { ...notnull });
+            await Habit.update({ id: habit.id }, { ...args });
             return {
               ok: true,
               error: null,
