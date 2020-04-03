@@ -15,7 +15,6 @@ const resolver: IResolvers = {
         const { user } = req;
         try {
           const habits = await Habit.find({ ownerId: user.id });
-          console.log(habits);
           if (habits) {
             return {
               ok: true,
