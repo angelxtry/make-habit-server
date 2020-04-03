@@ -1,5 +1,6 @@
 type CreateHabitResponse {
   ok: Boolean!
+  habit: Habit
   error: String
 }
 

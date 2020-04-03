@@ -13,6 +13,7 @@ export type Scalars = {
 export type CreateHabitResponse = {
    __typename?: 'CreateHabitResponse';
   ok: Scalars['Boolean'];
+  habit?: Maybe<Habit>;
   error?: Maybe<Scalars['String']>;
 };
 

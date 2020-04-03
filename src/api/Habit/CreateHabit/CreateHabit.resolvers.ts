@@ -17,14 +17,16 @@ const resolvers: IResolvers = {
       ): Promise<CreateHabitResponse> => {
         const { user } = req;
         try {
-          await Habit.create({ ...args, owner: user }).save();
+          const habit = await Habit.create({ ...args, owner: user }).save();
           return {
             ok: true,
+            habit,
             error: null,
           };
         } catch (error) {
           return {
             ok: false,
+            habit: null,
             error: error.message,
           };
         }
