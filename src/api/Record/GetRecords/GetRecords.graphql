@@ -1,0 +1,9 @@
+type GetRecordsResponse {
+  ok: Boolean!
+  error: String
+  records: [Record!]!
+}
+
+type Query {
+  GetRecords(habitId: Int!): GetRecordsResponse!
+}

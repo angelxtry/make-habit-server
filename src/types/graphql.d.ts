@@ -53,6 +53,13 @@ export type GetHabitsResponse = {
   error?: Maybe<Scalars['String']>;
 };
 
+export type GetRecordsResponse = {
+   __typename?: 'GetRecordsResponse';
+  ok: Scalars['Boolean'];
+  error?: Maybe<Scalars['String']>;
+  records: Array<Record>;
+};
+
 export type Habit = {
    __typename?: 'Habit';
   id: Scalars['Int'];
@@ -113,12 +120,18 @@ export type Query = {
    __typename?: 'Query';
   GetHabit: GetHabitResponse;
   GetHabits: GetHabitsResponse;
+  GetRecords: GetRecordsResponse;
   hello: Scalars['String'];
 };
 
 
 export type QueryGetHabitArgs = {
   id: Scalars['Int'];
+};
+
+
+export type QueryGetRecordsArgs = {
+  habitId: Scalars['Int'];
 };
 
 export type Record = {
