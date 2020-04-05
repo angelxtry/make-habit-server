@@ -26,6 +26,8 @@
 - [v] Habit UpdateHabits schema, resolver 작성
 - [v] User Email SignIn schema 작성
 - [v] User Email SignIn resolver 작성
+- [v] Record GetRecords schema, resolver 작성
+- [v] Record CreateRecord schema, resolver 작성
 
 - [ ] Jest setting
 - [ ] User Email SignUp test 작성
@@ -55,7 +57,16 @@
   - User, Habit, Record entity, schema 생성
   - CreateHabit schema, resolver 추가
 - 2020-03-27
-  - GetHabit, UpdateHabit schema, resolver 작성
+  - GetHabits, UpdateHabit schema, resolver 작성
+- 2020-04-01
+  - EmailSignin schema, resolver 작성
+  - GetHabit schema, resolver 작성
+- 2020-04-03
+  - UpdateHabit, CreateHabit 수정
+  - DeleteHabit 작성
+- 2020-04-05
+  - GetRecords, CreateRecord 작성
+  - Record entity에서 title 항목 제거 및 multi column unique index 추가
 
 ## 관련 글
 
