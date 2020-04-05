@@ -6,6 +6,7 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
   ManyToOne,
+  Index,
 } from 'typeorm';
 import Habit from './Habit';
 
@@ -16,13 +17,10 @@ export enum Score {
 }
 
 @Entity()
+@Index(['habit', 'date'], { unique: true })
 class Record extends BaseEntity {
   @PrimaryGeneratedColumn()
   id: number;
-
-  // size 확인
-  @Column({ type: 'text' })
-  title: string;
 
   // size 확인
   @Column({ type: 'text' })
@@ -37,7 +35,10 @@ class Record extends BaseEntity {
   @Column()
   habitId: number;
 
-  @ManyToOne(() => Habit, (haibt) => haibt.records)
+  @ManyToOne(
+    () => Habit,
+    (haibt) => haibt.records,
+  )
   habit: Habit;
 
   @CreateDateColumn()

@@ -6,7 +6,6 @@ enum Score {
 
 type Record {
   id: Int!
-  title: String!
   content: String!
   date: Date!
   score: Score!
