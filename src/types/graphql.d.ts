@@ -17,6 +17,13 @@ export type CreateHabitResponse = {
   error?: Maybe<Scalars['String']>;
 };
 
+export type CreateRecordResponse = {
+   __typename?: 'CreateRecordResponse';
+  ok: Scalars['Boolean'];
+  record?: Maybe<Record>;
+  error?: Maybe<Scalars['String']>;
+};
+
 
 
 export type DeleteHabitResponse = {
@@ -78,6 +85,7 @@ export type Habit = {
 export type Mutation = {
    __typename?: 'Mutation';
   CreateHabit: CreateHabitResponse;
+  CreateRecord: CreateRecordResponse;
   DeleteHabit: DeleteHabitResponse;
   EmailSignIn: EmailSignInResponse;
   EmailSignUp: EmailSignUpResponse;
@@ -89,6 +97,14 @@ export type MutationCreateHabitArgs = {
   title: Scalars['String'];
   content: Scalars['String'];
   startAt: Scalars['String'];
+};
+
+
+export type MutationCreateRecordArgs = {
+  content: Scalars['String'];
+  date: Scalars['Date'];
+  score: Score;
+  habitId: Scalars['Int'];
 };
 
 
@@ -137,7 +153,6 @@ export type QueryGetRecordsArgs = {
 export type Record = {
    __typename?: 'Record';
   id: Scalars['Int'];
-  title: Scalars['String'];
   content: Scalars['String'];
   date: Scalars['Date'];
   score: Score;

@@ -1,0 +1,14 @@
+type CreateRecordResponse {
+  ok: Boolean!
+  record: Record
+  error: String
+}
+
+type Mutation {
+  CreateRecord(
+    content: String!
+    date: Date!
+    score: Score!
+    habitId: Int!
+  ): CreateRecordResponse!
+}
